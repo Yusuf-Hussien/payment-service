@@ -1,0 +1,22 @@
+paymob:
+  API_KEY: ${PAYMOB_API_KEY:test_key}
+  PUBLIC_KEY: ${PAYMOB_PUBLIC_KEY:test_key}
+  SECRET_KEY: ${PAYMOB_SECRET_KEY:test_key}
+  hmac:
+    secret: test-hmac-secret-key-12345
+    algorithm: HmacSHA512
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  sql:
+    init:
+      mode: always

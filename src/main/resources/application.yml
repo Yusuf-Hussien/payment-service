@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: payment-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 1
+    url: jdbc:postgresql://localhost:5432/payments_db
+
+paymob:
+  API_KEY: ${PAYMOB_API_KEY}
+  PUBLIC_KEY: ${PAYMOB_PUBLIC_KEY}
+  SECRET_KEY: ${PAYMOB_SECRET_KEY}
+  hmac:
+    secret : ${HMAC_KEY}
+    algorithm : HmacSHA512
